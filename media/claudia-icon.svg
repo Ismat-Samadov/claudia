@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <style>
+    .icon-bg { fill: #5C5C5C; }
+    .icon-fg { fill: #FFFFFF; }
+    @media (prefers-color-scheme: dark) {
+      .icon-bg { fill: #C5C5C5; }
+      .icon-fg { fill: #1E1E1E; }
+    }
+  </style>
+  <rect class="icon-bg" x="1" y="1" width="14" height="14" rx="2" />
+  <path class="icon-fg" d="M8 3.5c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 8c-1.9 0-3.5-1.6-3.5-3.5S6.1 4.5 8 4.5s3.5 1.6 3.5 3.5S9.9 11.5 8 11.5z"/>
+  <path class="icon-fg" d="M5.5 8c0-.3.2-.5.5-.5h4c.3 0 .5.2.5.5s-.2.5-.5.5H6c-.3 0-.5-.2-.5-.5z"/>
+  <path class="icon-fg" d="M8 5.5c.3 0 .5.2.5.5v4c0 .3-.2.5-.5.5s-.5-.2-.5-.5V6c0-.3.2-.5.5-.5z"/>
+</svg>
