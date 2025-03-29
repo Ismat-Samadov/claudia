@@ -2,7 +2,7 @@
 
 Claudia brings the power of Claude 3.7 Sonnet directly into your VS Code environment, providing intelligent code assistance without leaving your editor.
 
-![Claudia Extension](media/claudia-preview.png)
+![Claudia Extension](media/claudia-icon.png)
 
 ## Features
 
