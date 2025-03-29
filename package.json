@@ -31,11 +31,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ismatsamadov/claudia.git"
+    "url": "https://github.com/Ismat-Samadov/claudia.git"
   },
-  "homepage": "https://github.com/ismatsamadov/claudia#readme",
+  "homepage": "https://github.com/Ismat-Samadov/claudia#readme",
   "bugs": {
-    "url": "https://github.com/ismatsamadov/claudia/issues"
+    "url": "https://github.com/Ismat-Samadov/claudia/issues"
   },
   "license": "MIT",
   "activationEvents": [
