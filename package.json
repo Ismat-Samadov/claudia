@@ -1,0 +1,151 @@
+{
+  "name": "claudia",
+  "displayName": "Claudia",
+  "description": "Claude 3.7 Sonnet AI assistant for VS Code",
+  "version": "0.0.1",
+  "publisher": "ismetsemedov",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages",
+    "Education",
+    "Machine Learning"
+  ],
+  "keywords": [
+    "claude",
+    "ai",
+    "assistant",
+    "code",
+    "analysis",
+    "documentation",
+    "anthropic",
+    "explanation",
+    "refactor"
+  ],
+  "icon": "media/claudia-icon.png",
+  "galleryBanner": {
+    "color": "#1E1E1E",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ismatsamadov/claudia.git"
+  },
+  "homepage": "https://github.com/ismatsamadov/claudia#readme",
+  "bugs": {
+    "url": "https://github.com/ismatsamadov/claudia/issues"
+  },
+  "license": "MIT",
+  "activationEvents": [
+    "onView:claudia.sidebar",
+    "onCommand:claudia.testClaudeAPI",
+    "onCommand:claudia.askClaude",
+    "onCommand:claudia.explainSelection"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "claudia-sidebar",
+          "title": "Claudia",
+          "icon": "media/claudia-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "claudia-sidebar": [
+        {
+          "type": "webview",
+          "id": "claudia.sidebar",
+          "name": "Claudia Assistant"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "claudia.testClaudeAPI",
+        "title": "Claudia: Test Claude API Connection"
+      },
+      {
+        "command": "claudia.askClaude",
+        "title": "Claudia: Ask Claude About Your Code"
+      },
+      {
+        "command": "claudia.explainSelection",
+        "title": "Claudia: Explain Selected Code"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorHasSelection",
+          "command": "claudia.explainSelection",
+          "group": "claudia"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Claudia",
+      "properties": {
+        "claudia.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "API Key for Anthropic's Claude API"
+        },
+        "claudia.maxFilesToInclude": {
+          "type": "number",
+          "default": 10,
+          "description": "Maximum number of files to include in context when asking questions"
+        },
+        "claudia.ignoredDirectories": {
+          "type": "array",
+          "default": ["node_modules", ".git", "dist", "build"],
+          "description": "Directories to ignore when gathering context"
+        },
+        "claudia.maxFileSize": {
+          "type": "number",
+          "default": 100000,
+          "description": "Maximum size of files to include in context (in bytes)"
+        },
+        "claudia.maxTotalSize": {
+          "type": "number",
+          "default": 1000000,
+          "description": "Maximum total size of context to send to Claude (in bytes)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p ./",
+    "watch-tests": "tsc -watch -p ./",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^14.x",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.27.0",
+    "glob": "^7.1.7",
+    "mocha": "^8.4.0",
+    "ts-loader": "^9.2.2",
+    "typescript": "^4.3.2",
+    "vscode-test": "^1.5.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0"
+  },
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}
