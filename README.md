@@ -95,7 +95,7 @@ Select a piece of code, right-click, and choose "Claudia: Explain Selected Code"
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/claudia.git
+git clone https://github.com/ismat-samadov/claudia.git
 cd claudia
 
 # Install dependencies
@@ -136,7 +136,7 @@ Your API key is stored in VS Code's secure storage and is only used to authentic
 
 ## Feedback and Contributions
 
-Feedback and contributions are welcome! Please submit issues and pull requests on the [GitHub repository](https://github.com/yourusername/claudia).
+Feedback and contributions are welcome! Please submit issues and pull requests on the [GitHub repository](https://github.com/ismat-samadov/claudia).
 
 ## Credits
 
