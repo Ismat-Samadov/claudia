@@ -21,7 +21,7 @@ You can install Claudia from the Visual Studio Code Marketplace:
 3. Search for "Claudia"
 4. Click "Install"
 
-Alternatively, download the VSIX file from the [releases page](https://github.com/yourusername/claudia/releases) and install it manually:
+Alternatively, download the VSIX file from the [releases page](https://github.com/ismat-samadov/claudia/releases) and install it manually:
 
 ```bash
 code --install-extension claudia-0.0.1.vsix
